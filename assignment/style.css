@@ -9,53 +9,135 @@ body {
     position: relative; 
 }
 
-.picture {
-    
-}
-
-header {
-    background-color: #333;
+.site-header {
+    background-image: url(banner.webp);
     color: white;
     padding: 30px;
     text-align: center;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-header h1 {
+
+.site-header h1 {
     margin: 0 0 0 10px; 
     display: flex;
     align-items: center;
 }
-header h1 i {
+
+.site-header h1 i {
     margin-right: 5px; 
 }
-nav ul {
+
+.site-nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0 10px 0 0; 
-    display: flex; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-nav ul li {
-    margin: 0 10px;
+
+.site-nav ul li {
+    margin: 5px 0;
 }
-nav ul li a {
+
+.site-nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #3e79aa;
     color: white;
     text-decoration: none;
+    width: 100px; 
+    text-align: center;
+    transition: width 0.3s ease; 
 }
-main {
+
+.site-nav ul li a:hover {
+    background-color: white;
+    color:#3e79aa;
+    border:#3e79aa;
+    border-width:4px;
+    width: 150px; 
+}
+
+
+.site-main {
     padding: 20px;
     text-align: center;
-    flex: 1; 
 }
-footer {
-    background-color: #333;
+
+.footer {
+    background-color: #3e79aa;
     color: white;
     text-align: center;
     padding: 10px;
     position: absolute; 
     bottom: 0;
     width: 100%;
+}
+
+.hidden{
+    transition: 0.5;
+    display: none;
+}
+
+.cookies{
+    font-size: 100px;
+    position: fixed;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    background-color: white;
+    border:solid black;
+}
+
+.btn{
+    cursor: pointer;
+    border: solid thin black;
+    margin: 10px;
+    padding: 10px 20px;
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    font-size: 72px;
+    transition: 0.5s;
+    position: absolute;
+    background-color: gray;
+    right: 20px;
+    bottom: 20px;
+}
+
+.btn:hover{
+    text-align: center;
+    width: 500px;
+    height: 115px;
+    font-size: 72px;
+    background-color: rgb(78, 78, 245);
+    color: white;
+    transition: 0.5s;
+}
+
+.pictures {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pictures img {
+    width: 100px;
+    height: auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.title{
+    margin: 0;
 }
