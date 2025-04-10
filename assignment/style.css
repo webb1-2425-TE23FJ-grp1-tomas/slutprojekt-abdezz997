@@ -20,6 +20,9 @@ body {
     flex-wrap: wrap;
 }
 
+#Cosplay-button{
+    background-color:  #295880;
+}
 
 .site-header h1 {
     margin: 0 0 0 10px; 
