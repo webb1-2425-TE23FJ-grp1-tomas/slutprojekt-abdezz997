@@ -56,21 +56,23 @@ div {
 .hero {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     gap: 30px;
-    margin-top: 200px; 
-    margin-bottom: 60px;
+    max-width: calc(5 * 200px + 4 * 30px); /* 5 items and 4 gaps */
+    margin: 200px auto 60px auto; /* Center the container */
 }
+
 
 .character {
     text-align: center;
     background-color: whitesmoke;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    width: 150px;
-    padding: 20px;
+    width: 200px;
     border-radius: 15px;
     position: relative;
+    margin-bottom: 20px; 
 }
 
 .character img {
@@ -80,8 +82,9 @@ div {
 
 .character:hover {
     box-shadow: 2px 8px 16px 0 rgba(0, 0, 0, 0.2);
-    width: 200px;
+    transform: scale(1.1); /* visual effect instead of width change */
 }
+
 
 .taken {
     color: red;

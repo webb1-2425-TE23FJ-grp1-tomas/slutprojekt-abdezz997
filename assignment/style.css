@@ -189,16 +189,6 @@ button:hover {
 
 
 
-.footer {
-    background-color: #3e79aa;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed; 
-    bottom: 0;
-    width: 100%;
-}
-
 .hidden{
     transition: 0.5;
     display: none;
