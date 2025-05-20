@@ -5,56 +5,57 @@ body {
   background-color: #f4f4f4;
 }
 
-
 .site-header {
-    background-image: url(banner.jpg);
-    color: black;
-    padding: 30px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  background-image: url(banner.jpg);
+  color: black;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .site-nav ul li {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .site-nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    width: 100px; 
-    text-align: center;
-    transition: width 0.3s ease; 
+  display: block;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  width: 100px; 
+  text-align: center;
+  transition: width 0.3s ease; 
 }
 
 .site-nav ul li a:hover {
-    background-color: black;
-    color:white;
-    border:white;
-    border-width:4px;
-    width: 150px; 
+  background-color: black;
+  color:white;
+  border:white;
+  border-width:4px;
+  width: 150px; 
 }
-
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Exactly 4 columns */
+  grid-template-columns: repeat(4, 1fr); /* Initially 4 columns */
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
   margin: auto;
+  grid-template-areas:
+    "a b c d"
+    "e f g h";
 }
 
 .card {
   background-color: whitesmoke;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
-  color:black;
+  color: black;
 }
 
 .card img {
@@ -67,8 +68,8 @@ body {
   font-size: 18px;
 }
 
-.occupation{
-    color:black;
+.occupation {
+  color: black;
 }
 
 button {
@@ -84,11 +85,63 @@ button {
   font-size: 18px;
 }
 
-
-button:hover{
-    background-color: gray;
+button:hover {
+  background-color: gray;
 }
 
-#Contact-button{
-    background-color:  rgb(179, 179, 179);
+#Contact-button {
+  background-color: rgb(179, 179, 179);
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f"
+      "g h";
+  }
+
+#pic1 {
+grid-area: a;
+}
+
+#pic2 {
+  grid-area: b;
+}
+
+#pic3 {
+  grid-area: c;
+}
+
+#pic4 {
+  grid-area: d;
+}
+
+#pic5 {
+  grid-area: e;
+}
+
+#pic6 {
+  grid-area: f;
+}
+
+#pic7 {
+  grid-area: g;
+}
+
+#pic8 {
+  grid-area: h;
+}
+
+  .title {
+    font-size: 14px; 
+  }
+
+  .occupation {
+    font-size: 12px; 
+  }
 }
