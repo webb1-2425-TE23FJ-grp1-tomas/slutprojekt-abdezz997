@@ -16,6 +16,12 @@ body {
   flex-wrap: wrap;
 }
 
+.site-nav ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
 .site-nav ul li {
   margin: 5px 0;
 }
@@ -33,11 +39,12 @@ body {
 
 .site-nav ul li a:hover {
   background-color: black;
-  color:white;
-  border:white;
-  border-width:4px;
+  color: white;
+  border: white;
+  border-width: 4px;
   width: 150px; 
 }
+
 
 .card-container {
   display: grid;
@@ -96,6 +103,51 @@ button:hover {
 
 
 @media screen and (max-width: 600px) {
+    /* Stack the header content vertically */
+    .site-header {
+        flex-direction: column; /* Stack header content vertically */
+        align-items: center; /* Center the items */
+        padding: 5px; /* Add some padding for better spacing */
+    }
+
+    /* Wrap the icon and title in a container for vertical stacking */
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px; /* Add space between the icon/title and the buttons */
+    }
+
+    /* Adjust the title size for smaller screens */
+    .site-header h1 {
+        font-size: 24px; /* Adjust title font size */
+        margin: 5px; /* Add space above and below the title */
+    }
+
+    /* Adjust the navigation buttons for smaller screens */
+    .site-nav ul {
+        display: flex;
+        flex-direction: row; /* Align buttons in a row */
+        justify-content: center; /* Center the buttons */
+        margin: 0;
+        padding: 0;
+        gap: 10px; /* Space between buttons */
+    }
+
+    .site-nav ul li a {
+        padding: 8px 20px;
+        font-size: 14px;
+        width: auto; /* Adjust width based on content */
+    }
+
+    /* Resize the header image for smaller screens */
+    .site-header img {
+        width: 150px;
+        height: 100px;
+    }
+
+
+
   .card-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -104,6 +156,7 @@ button:hover {
       "e f"
       "g h";
   }
+
 
 #pic1 {
 grid-area: a;

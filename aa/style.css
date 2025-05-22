@@ -31,6 +31,7 @@ div {
 /* === Site Header === */
 .site-header {
     background-image: url(clothes.webp);
+    
     color: white;
     padding: 30px;
     text-align: center;
@@ -56,6 +57,11 @@ div {
 
 .site-header h1 i {
     margin-right: 5px;
+}
+
+.site-header img {
+    width: 150px; 
+    height: 100px; 
 }
 
 .title {
@@ -204,4 +210,86 @@ div {
 
 #Cosplay-button {
     background-color: lightgray;
+}
+
+/* For small screens below 1000px */
+@media screen and (max-width: 1000px) {
+    /* Title resizing */
+    .site-header h1 {
+        font-size: 24px; /* Adjust the title font size */
+    }
+
+    /* If you want to adjust the title inside header-content specifically */
+    .header-content h1 {
+        font-size: 24px; /* Adjust font size here as well */
+    }
+
+    /* Adjusting header image size for small screens */
+    .site-header img {
+        width: 100px; 
+        height: auto; 
+    }
+
+    .site-nav ul li a {
+        padding: 8px; 
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .card button {
+        padding: 6px;
+        font-size: 14px; 
+    }
+
+    /* Adjust the header subtitle size */
+    .header-content h2 {
+        font-size: 20px;  /* Adjust if you want to modify a subtitle h2 */
+    }
+}
+
+
+/* For screens below 600px */
+@media screen and (max-width: 600px) {
+    /* Stack the header content vertically */
+    .site-header {
+        flex-direction: column; /* Stack header content vertically */
+        align-items: center; /* Center the items */
+        padding: 5px; /* Add some padding for better spacing */
+    }
+
+    /* Wrap the icon and title in a container for vertical stacking */
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px; /* Add space between the icon/title and the buttons */
+    }
+
+    /* Adjust the title size for smaller screens */
+    .site-header h1 {
+        font-size: 24px; /* Adjust title font size */
+        margin: 5px; /* Add space above and below the title */
+    }
+
+    /* Adjust the navigation buttons for smaller screens */
+    .site-nav ul {
+        display: flex;
+        flex-direction: row; /* Align buttons in a row */
+        justify-content: center; /* Center the buttons */
+        margin: 0;
+        padding: 0;
+        gap: 10px; /* Space between buttons */
+    }
+
+    .site-nav ul li a {
+        padding: 8px 20px;
+        font-size: 14px;
+        width: auto; /* Adjust width based on content */
+    }
+
+    /* Resize the header image for smaller screens */
+    .site-header img {
+        width: 150px;
+        height: 100px;
+    }
 }
