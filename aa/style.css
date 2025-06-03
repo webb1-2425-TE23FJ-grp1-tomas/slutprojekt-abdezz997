@@ -1,124 +1,123 @@
 /* === Global Styles === */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Inkluderar padding och border i elementets totala bredd/höjd */
 }
 
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(190deg, rgb(70, 60, 45), rgb(95, 62, 0));
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    position: relative;
+    font-family: sans-serif; /* Använder sans-serif som standardtypsnitt */
+    margin: 0; /* Tar bort standardmarginal från body */
+    padding: 0; /* Tar bort standardpadding från body */
+    background: linear-gradient(190deg, rgb(70, 60, 45), rgb(95, 62, 0)); /* Lutande bakgrundsfärg */
+    display: flex; /* Flexboxlayout för att kunna stapla innehåll */
+    flex-direction: column; /* Staplar innehåll vertikalt */
+    min-height: 100vh; /* Minsta höjd är hela skärmhöjden */
+    position: relative; /* Möjliggör absolut positionering inuti body */
 }
 
 /* === Layout Containers === */
 #container {
-    width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 600px 300px 400px;
-    gap: 20px;
+    width: 1200px; /* Sätter en fast bredd på hela layoutcontainern */
+    display: grid; /* Använder CSS Grid för layout */
+    grid-template-columns: repeat(4, 1fr); /* Fyra lika breda kolumner */
+    grid-template-rows: 1fr 600px 300px 400px; /* Fyra rader med fasta höjder */
+    gap: 20px; /* Avstånd mellan rutorna i griden */
 }
 
 div {
-    border-radius: 15px;
-    padding: 10px;
+    border-radius: 15px; /* Rundade hörn på alla div-element */
+    padding: 10px; /* Inre marginal */
 }
 
 /* === Site Header === */
 .site-header {
-    background-image: url(clothes.webp);
-    
-    color: white;
-    padding: 30px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    z-index: 2;
+    background-image: url(clothes.webp); /* Bakgrundsbild i headern */
+    color: white; /* Vit text */
+    padding: 30px; /* Inre marginal */
+    text-align: center; /* Centrerad text */
+    display: flex; /* Flexboxlayout */
+    justify-content: space-between; /* Fördelar innehållet jämnt horisontellt */
+    align-items: center; /* Centrerar innehåll vertikalt */
+    flex-wrap: wrap; /* Tillåter radbrytning vid behov */
+    width: 100%; /* Full bredd */
+    z-index: 2; /* Ligger ovanpå andra element */
 }
 
 .header-content {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* Flexboxlayout för innehållet i headern */
+    align-items: center; /* Vertikal centrering */
+    gap: 10px; /* Avstånd mellan element */
 }
 
 .site-header h1 {
-    margin: 0 0 0 10px;
-    display: flex;
-    align-items: center;
+    margin: 0 0 0 10px; /* Marginal vänster */
+    display: flex; /* Flex för att placera ikon och text i rad */
+    align-items: center; /* Vertikal centrering */
 }
 
 .site-header h1 i {
-    margin-right: 5px;
+    margin-right: 5px; /* Avstånd mellan ikon och text */
 }
 
 .site-header img {
-    width: 150px; 
-    height: 100px; 
+    width: 150px; /* Bredd på logotypen */
+    height: 100px; /* Höjd på logotypen */
 }
 
 .title {
-    margin: 0;
+    margin: 0; /* Tar bort standardmarginal */
 }
 
 /* === Navigation === */
 .site-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Tar bort punktlistan */
+    padding: 0; /* Tar bort padding */
+    margin: 0; /* Tar bort marginal */
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Länkar staplas vertikalt */
+    align-items: flex-start; /* Vänsterjustering */
 }
 
 .site-nav ul li {
-    margin: 5px 0;
+    margin: 5px 0; /* Mellanrum mellan navigationspunkterna */
 }
 
 .site-nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    width: 100px;
-    text-align: center;
-    transition: width 0.3s ease;
+    display: block; /* Gör hela länken klickbar */
+    padding: 10px 20px; /* Inre marginal */
+    background-color: white; /* Vit bakgrund */
+    color: black; /* Svart text */
+    text-decoration: none; /* Tar bort understrykning */
+    width: 100px; /* Standardbredd */
+    text-align: center; /* Centrerad text */
+    transition: width 0.3s ease; /* Smidig breddförändring vid hover */
 }
 
 .site-nav ul li a:hover {
-    background-color: black;
-    color: white;
-    width: 150px;
+    background-color: black; /* Svart bakgrund vid hover */
+    color: white; /* Vit text vid hover */
+    width: 150px; /* Bredd utökas vid hover */
 }
 
 /* === Header Grid === */
 #header {
-    grid-column: 1/5;
-    display: grid;
-    grid-template-columns: 100px 200px 1fr min-content;
-    align-items: center;
-    gap: 20px;
+    grid-column: 1/5; /* Sträcker sig över alla fyra kolumner */
+    display: grid; /* Gridlayout */
+    grid-template-columns: 100px 200px 1fr min-content; /* Specifika kolumnbredder */
+    align-items: center; /* Centrerar innehållet vertikalt */
+    gap: 20px; /* Avstånd mellan kolumnerna */
     padding: 0;
 }
 
 #header img {
-    width: 100%;
+    width: 100%; /* Bilden fyller sin container */
 }
 
 #header ul {
-    grid-column: 4/5;
-    list-style: none;
+    grid-column: 4/5; /* Placeras i fjärde kolumnen */
+    list-style: none; /* Ingen punktlista */
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Tre kolumner för länkar */
     gap: 20px;
 }
 
@@ -133,7 +132,7 @@ div {
 /* === Main Content === */
 .site-main {
     padding: 20px;
-    text-align: center;
+    text-align: center; /* Centrerar text */
 }
 
 .hero {
@@ -142,16 +141,16 @@ div {
     flex-wrap: wrap;
     align-items: center;
     gap: 30px;
-    max-width: calc(5 * 200px + 4 * 30px);
-    margin: 25px auto 60px auto;
+    max-width: calc(5 * 200px + 4 * 30px); /* Maxbredd för 5 kort med mellanrum */
+    margin: 25px auto 60px auto; /* Centrerar blocket vertikalt och horisontellt */
 }
 
 /* === Characters === */
 .character {
     text-align: center;
-    background-color: whitesmoke;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: whitesmoke; /* Ljus bakgrund */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skugga */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation vid hover */
     width: 200px;
     border-radius: 15px;
     position: relative;
@@ -159,13 +158,13 @@ div {
 }
 
 .character img {
-    width: 100%;
+    width: 100%; /* Fyller hela bredden */
     height: 200px;
 }
 
 .character:hover {
-    box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
+    box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.2); /* Mer markant skugga */
+    transform: scale(1.1); /* Förstorar kortet något vid hover */
 }
 
 .taken {
@@ -175,14 +174,14 @@ div {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Centrerar texten */
 }
 
 /* === Pictures Section === */
 .pictures {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 10px; /* Avstånd mellan bilder */
 }
 
 .pictures img {
@@ -192,7 +191,7 @@ div {
 
 /* === Footer === */
 .footer {
-    background-color: rgb(223, 200, 0);
+    background-color: rgb(223, 200, 0); /* Gul bakgrund */
     color: white;
     text-align: center;
     padding: 10px;
@@ -203,91 +202,82 @@ div {
 
 /* === Misc === */
 .hidden {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    display: none; /* Gömmer element */
+    opacity: 0; /* Osynligt */
+    transition: opacity 0.5s ease; /* Mjuk övergång */
 }
 
 #Cosplay-button {
     background-color: lightgray;
 }
 
-/* For small screens below 1000px */
+/* === Responsiv design === */
+/* För skärmar under 1000px */
 @media screen and (max-width: 1000px) {
-    /* Title resizing */
     .site-header h1 {
-        font-size: 24px; /* Adjust the title font size */
+        font-size: 24px;
     }
 
-    /* If you want to adjust the title inside header-content specifically */
     .header-content h1 {
-        font-size: 24px; /* Adjust font size here as well */
+        font-size: 24px;
     }
 
-    /* Adjusting header image size for small screens */
     .site-header img {
-        width: 100px; 
-        height: auto; 
+        width: 100px;
+        height: auto;
     }
 
     .site-nav ul li a {
-        padding: 8px; 
+        padding: 8px;
         width: 80px;
         font-size: 14px;
     }
 
     .card button {
         padding: 6px;
-        font-size: 14px; 
+        font-size: 14px;
     }
 
-    /* Adjust the header subtitle size */
     .header-content h2 {
-        font-size: 20px;  /* Adjust if you want to modify a subtitle h2 */
+        font-size: 20px;
     }
 }
 
-
-/* For screens below 600px */
+/* För skärmar under 600px */
 @media screen and (max-width: 600px) {
-    /* Stack the header content vertically */
     .site-header {
-        flex-direction: column; /* Stack header content vertically */
-        align-items: center; /* Center the items */
-        padding: 5px; /* Add some padding for better spacing */
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
     }
 
-    /* Wrap the icon and title in a container for vertical stacking */
     .header-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 5px; /* Add space between the icon/title and the buttons */
+        margin-bottom: 5px;
     }
 
-    /* Adjust the title size for smaller screens */
     .site-header h1 {
-        font-size: 24px; /* Adjust title font size */
-        margin: 5px; /* Add space above and below the title */
+        font-size: 24px;
+        margin: 5px;
     }
 
-    /* Adjust the navigation buttons for smaller screens */
     .site-nav ul {
         display: flex;
-        flex-direction: row; /* Align buttons in a row */
-        justify-content: center; /* Center the buttons */
+        flex-direction: row;
+        justify-content: center;
         margin: 0;
         padding: 0;
-        gap: 10px; /* Space between buttons */
+        gap: 10px;
     }
 
     .site-nav ul li a {
         padding: 8px 20px;
         font-size: 14px;
-        width: auto; /* Adjust width based on content */
+        width: auto;
     }
 
-    /* Resize the header image for smaller screens */
     .site-header img {
         width: 150px;
         height: 100px;
